@@ -195,6 +195,62 @@ export const notes: CaseStudy[] = [
     ],
   },
   {
+    slug: 'claude-agents-marketplace',
+    title: 'Claude Agents Marketplace',
+    tagline: 'Public catalog of 37 Claude Code subagents + 17 skills with one-click install.',
+    year: '2026',
+    status: 'Live',
+    role: 'Product · AI ecosystem',
+    timeline: '1 day · Apr 2026',
+    href: 'https://agents-btw-studio.fly.dev',
+    accent: '#B8A6FF',
+    gradient:
+      'radial-gradient(ellipse at 30% 30%, rgba(184,166,255,0.38), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.18), transparent 60%)',
+    stack: [
+      'Next.js 15',
+      'React 19',
+      'TypeScript',
+      'Tailwind',
+      'gray-matter',
+      'Fuse.js',
+      'react-markdown',
+      'shiki',
+      'Fly.io',
+      'GitHub Actions',
+    ],
+    metrics: [
+      { value: '37', label: 'Agents seeded' },
+      { value: '17', label: 'Skills seeded' },
+      { value: '62', label: 'Static pages' },
+      { value: '1 day', label: 'Spec to live' },
+    ],
+    tags: ['product', 'ai', 'ecosystem', 'catalog'],
+    receipts: {
+      agents: ['product-manager', 'architect', 'developer', 'reviewer'],
+      commits: 1,
+      deploys: 1,
+      shippedIn: '1 day',
+    },
+    sections: [
+      {
+        heading: 'Context',
+        body: 'Claude Code subagents and skills are powerful but discoverability is broken — most people find them through Reddit threads, gists and DMs. We had 37 production-tested agents and 17 skills sitting in our own workspace and no curated way to share them. A public catalog fixes both problems.',
+      },
+      {
+        heading: 'Approach',
+        body: 'Static-first: markdown files in seed/ are parsed at build time by scripts/build-data.ts (gray-matter + personal-data sanitize + tag inference) into data/*.json. Next.js 15 App Router SSG generates 62 static pages. Fuse.js fuzzy search and tag filters are fully client-side. No database, no auth, no runtime dependencies.',
+      },
+      {
+        heading: 'Stack decisions',
+        body: 'Reused the btw-site Tailwind tokens, Dockerfile and Fly.io deploy pattern — dark-luxe stays consistent across the studio. Skipped Supabase intentionally for MVP: catalog data is static markdown, perfect for SSG. Shiki code highlighting runs in server components only, zero client bundle cost.',
+      },
+      {
+        heading: 'Outcome',
+        body: 'Live at the link above. Companion open-source seed repo at github.com/workmailan8n-hash/btw-agents-pack (MIT). Routes: /agents, /skills, per-slug detail pages with install snippets (clipboard API + textarea fallback), sitemap, robots. Built with the same agent pipeline (product-manager → architect → developer → reviewer) that the catalog itself publishes.',
+      },
+    ],
+  },
+  {
     slug: 'btw-studio-site',
     title: 'BTW Studio · this site',
     tagline: 'Editorial dark-luxe brand site with r3f hero, Next.js 15, deployed on Fly.io.',

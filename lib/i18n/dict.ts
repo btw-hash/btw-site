@@ -74,6 +74,7 @@ export const dict = {
         'Stealth · AI infra': 'Stealth · AI infra',
         'Multi-platform publisher': 'Multi-platform publisher',
         'Building in public': 'Building in public',
+        'Public catalog · one-click install': 'Public catalog · one-click install',
       } as Record<string, string>,
     },
     process: {
@@ -268,6 +269,7 @@ export const dict = {
         'Stealth · AI infra': 'Stealth · AI-інфра',
         'Multi-platform publisher': 'Мультиплатформений паблішер',
         'Building in public': 'Building in public',
+        'Public catalog · one-click install': 'Публічний каталог · інсталяція в 1 клік',
       } as Record<string, string>,
     },
     process: {

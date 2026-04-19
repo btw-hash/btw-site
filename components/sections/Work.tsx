@@ -61,6 +61,17 @@ const projects: Project[] = [
     gradient:
       'radial-gradient(ellipse at 50% 50%, rgba(255,184,107,0.32), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(184,166,255,0.2), transparent 60%)',
   },
+  {
+    name: 'Claude Agents Marketplace',
+    tagKey: 'Public catalog · one-click install',
+    year: '2026',
+    href: 'https://agents-btw-studio.fly.dev',
+    status: 'Live',
+    stack: ['Next.js 15', 'Fuse.js', 'shiki', 'Fly.io'],
+    accent: '#B8A6FF',
+    gradient:
+      'radial-gradient(ellipse at 30% 30%, rgba(184,166,255,0.38), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.18), transparent 60%)',
+  },
 ];
 
 export function Work() {
