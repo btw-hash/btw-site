@@ -72,6 +72,17 @@ const projects: Project[] = [
     gradient:
       'radial-gradient(ellipse at 30% 30%, rgba(184,166,255,0.38), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.18), transparent 60%)',
   },
+  {
+    name: 'vault-sync',
+    tagKey: 'Obsidian → Notion · OSS CLI',
+    year: '2026',
+    href: 'https://github.com/workmailan8n-hash/vault-sync',
+    status: 'Live',
+    stack: ['Node.js', 'ESM', 'Notion API', 'gray-matter'],
+    accent: '#FFB86B',
+    gradient:
+      'radial-gradient(ellipse at 40% 40%, rgba(255,184,107,0.38), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(184,166,255,0.18), transparent 60%)',
+  },
 ];
 
 export function Work() {

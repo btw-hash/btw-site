@@ -75,6 +75,7 @@ export const dict = {
         'Multi-platform publisher': 'Multi-platform publisher',
         'Building in public': 'Building in public',
         'Public catalog · one-click install': 'Public catalog · one-click install',
+        'Obsidian → Notion · OSS CLI': 'Obsidian → Notion · OSS CLI',
       } as Record<string, string>,
     },
     process: {
@@ -270,6 +271,7 @@ export const dict = {
         'Multi-platform publisher': 'Мультиплатформений паблішер',
         'Building in public': 'Building in public',
         'Public catalog · one-click install': 'Публічний каталог · інсталяція в 1 клік',
+        'Obsidian → Notion · OSS CLI': 'Obsidian → Notion · OSS CLI',
       } as Record<string, string>,
     },
     process: {

@@ -251,6 +251,51 @@ export const notes: CaseStudy[] = [
     ],
   },
   {
+    slug: 'vault-sync',
+    title: 'vault-sync',
+    tagline: 'One-way sync from an Obsidian vault to Notion pages. Frontmatter is the contract.',
+    year: '2026',
+    status: 'Live',
+    role: 'OSS tool · pipeline extraction',
+    timeline: '0.5 day · Apr 2026',
+    href: 'https://github.com/workmailan8n-hash/vault-sync',
+    accent: '#FFB86B',
+    gradient:
+      'radial-gradient(ellipse at 40% 40%, rgba(255,184,107,0.38), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(184,166,255,0.18), transparent 60%)',
+    stack: ['Node.js 20', 'ESM', '@notionhq/client', 'gray-matter', 'commander', 'node:test'],
+    metrics: [
+      { value: '7', label: 'Markdown → Notion blocks' },
+      { value: '9', label: 'Passing tests' },
+      { value: 'MIT', label: 'License' },
+      { value: '0.5d', label: 'Spec to publish' },
+    ],
+    tags: ['oss', 'tool', 'pkm', 'automation'],
+    receipts: {
+      agents: ['architect', 'developer', 'test-engineer'],
+      commits: 1,
+      deploys: 0,
+      shippedIn: '0.5 day',
+    },
+    sections: [
+      {
+        heading: 'Context',
+        body: 'We already run a private script that mirrors our Obsidian vault to Notion so collaborators see up-to-date project pages without touching markdown. The script worked but was 700 lines of tangled JS hardcoded to our workspace. Other people asking for it pushed us to extract the reusable core into an installable CLI.',
+      },
+      {
+        heading: 'Approach',
+        body: 'Extracted the generic path — frontmatter discovery + markdown-to-Notion-blocks + delete-and-append sync — into a ~250 line ESM library with a Commander CLI on top. Config lives in .vault-sync.json. Supported blocks: heading_1/2/3, bulleted and numbered lists, to-do, quote, code with language detection, paragraphs. Content truncation at Notion-s 2000-char limit baked in.',
+      },
+      {
+        heading: 'Stack decisions',
+        body: 'Pure ESM, Node 20+, zero TypeScript. The job is small enough that adding a build step would be waste. gray-matter parses frontmatter, @notionhq/client talks to Notion, commander parses argv. Tests in node:test — no test framework to maintain. 9 tests cover every markdown path.',
+      },
+      {
+        heading: 'Outcome',
+        body: 'Public OSS on GitHub under MIT. Roadmap in README: v0.2 adds inline formatting (bold/italic/links), v0.3 watch mode, v0.4 GitHub Action starter. Sister tool to Claude Agents Marketplace — same studio, same philosophy: extract what actually works, ship it small, keep it predictable.',
+      },
+    ],
+  },
+  {
     slug: 'btw-studio-site',
     title: 'BTW Studio · this site',
     tagline: 'Editorial dark-luxe brand site with r3f hero, Next.js 15, deployed on Fly.io.',
