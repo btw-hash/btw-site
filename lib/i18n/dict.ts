@@ -5,6 +5,8 @@ export const dict = {
     nav: {
       work: 'work',
       notes: 'notes',
+      labs: 'labs',
+      oss: 'open source',
       about: 'about',
       contact: 'contact',
     },
@@ -64,10 +66,14 @@ export const dict = {
       colStack: 'Stack',
       colStatus: 'Status',
       hoverHint: '← hover a project',
+      alsoHint: 'Also — tools and experiments we built along the way:',
       statusLive: 'Live',
       statusNda: 'NDA',
       statusArchived: 'Archived',
       tags: {
+        'AI course generator · SaaS with Stripe': 'AI course generator · SaaS with Stripe',
+        'Content ops automation · daily in production':
+          'Content ops automation · daily in production',
         'Pixel-art agent visualizer': 'Pixel-art agent visualizer',
         'AI course generator': 'AI course generator',
         'Stealth · internal tool': 'Stealth · internal tool',
@@ -165,6 +171,53 @@ export const dict = {
       unitPlural: 'projects',
       note: 'Counts are derived from the stack field on each case study. This is the tooling we ship on, not a laundry list of things we know.',
     },
+    labs: {
+      eyebrow: 'Labs · internal tools, shown publicly',
+      heading: 'Tools we use on our own jobs.',
+      intro:
+        'These are R&D tiles — the agent observability and the catalog we keep running because we use them every day. They are not client work. When we build similar dashboards or marketplaces for clients, this is the reference architecture.',
+      footnote: 'For client-facing case studies with outcomes, see',
+    },
+    oss: {
+      eyebrow: 'Open source · MIT',
+      heading: 'What we give back.',
+      intro:
+        'Small, focused tools extracted from our internal infrastructure. MIT licensed. Use them, fork them, ship them. No support contract, no upsell. If we needed it, we wrote it — and it seemed useful to release.',
+      footnote:
+        'We plan to publish to npm under @btw-studio as the tools stabilize. For now: install from GitHub, read the README, open an issue if something breaks.',
+    },
+    colophon: {
+      eyebrow: 'Colophon · about this site',
+      heading: 'How this site was built.',
+      intro:
+        'The tech stack, the process, the receipts. This is a record, not a case study — you are already on the site, you do not need us to sell it back to you.',
+      stackHeading: 'Stack',
+      stackRows: [
+        { label: 'Framework', value: 'Next.js 15.5 App Router' },
+        { label: 'UI', value: 'React 19 · TypeScript · Tailwind v3' },
+        { label: 'Motion', value: 'Framer Motion + motion/react' },
+        { label: '3D hero', value: '@react-three/fiber 9 + drei 10' },
+        { label: 'Fonts', value: 'Instrument Serif · Inter Tight · JetBrains Mono' },
+        { label: 'Forms', value: 'react-hook-form + zod + Resend' },
+        { label: 'Hosting', value: 'Fly.io (fra · 512MB · 66MB image)' },
+        { label: 'CI/CD', value: 'GitHub Actions · flyctl deploy' },
+      ],
+      processHeading: 'Process',
+      processSteps: [
+        'Product-manager agent wrote the PRD from a one-paragraph brief.',
+        'Business-analyst agent produced the REQ-N / TASK-N / SVC-N spec.',
+        'Architect agent decided stack + file layout + deploy target.',
+        'Brand-identity + motion + 3D-scene agents produced the design docs.',
+        'UX-designer agent turned requirements into wireframes.',
+        'Developer agent implemented section by section with section-level commits.',
+        'Reviewer + test-engineer + tester agents did QA.',
+        'DevOps-automator agent wired GitHub Actions + Fly.io deploy.',
+      ],
+      receiptsHeading: 'Receipts',
+      creditsHeading: 'Credits',
+      credits:
+        'Concept, brand, copy, code: BTW Studio. Pipeline orchestrated with Claude Code + a custom waterfall of 8 subagents. Deployed from spec to production in two calendar days. Source for this site is private — the agent pack that ships it is public at github.com/workmailan8n-hash/btw-agents-pack.',
+    },
     about: {
       heading: 'About',
       manifestoHeading: 'We build software that actually ships.',
@@ -201,6 +254,8 @@ export const dict = {
     nav: {
       work: 'роботи',
       notes: 'нотатки',
+      labs: 'labs',
+      oss: 'open source',
       about: 'про нас',
       contact: 'контакт',
     },
@@ -260,12 +315,16 @@ export const dict = {
       colStack: 'Стек',
       colStatus: 'Статус',
       hoverHint: '← наведіть на проєкт',
+      alsoHint: 'А ще — інструменти та експерименти, які ми зробили по дорозі:',
       statusLive: 'Live',
       statusNda: 'NDA',
       statusArchived: 'В архіві',
       tags: {
         'Pixel-art agent visualizer': 'Піксель-арт візуалізатор агентів',
         'AI course generator': 'AI-генератор курсів',
+        'AI course generator · SaaS with Stripe': 'AI-генератор курсів · SaaS зі Stripe',
+        'Content ops automation · daily in production':
+          'Content-ops автоматизація · щодня в продакшні',
         'Stealth · internal tool': 'Stealth · внутрішній тул',
         'Stealth · AI infra': 'Stealth · AI-інфра',
         'Multi-platform publisher': 'Мультиплатформений паблішер',
@@ -359,6 +418,53 @@ export const dict = {
       unit: 'проєкт',
       unitPlural: 'проєктів',
       note: 'Цифри автоматично виведені з поля stack кожного кейсу. Це інструменти, на яких ми справді релізимо, а не «що ми знаємо».',
+    },
+    labs: {
+      eyebrow: 'Labs · внутрішні тули, показані публічно',
+      heading: 'Інструменти, на яких ми працюємо.',
+      intro:
+        'Це R&D-плитки — observability агентів і каталог, які ми тримаємо бо користуємось ними щодня. Це не клієнтська робота. Коли ми робимо подібні dashboards чи маркетплейси для клієнтів — це референсна архітектура.',
+      footnote: 'Клієнтські кейси з результатами дивись у',
+    },
+    oss: {
+      eyebrow: 'Open source · MIT',
+      heading: 'Те, що ми віддаємо.',
+      intro:
+        'Маленькі сфокусовані тули, виділені з нашої внутрішньої інфраструктури. Ліцензія MIT. Користуйтесь, форкайте, релізте. Без support-контракту, без апселла. Нам було потрібно — ми написали, і здалося корисним опублікувати.',
+      footnote:
+        'Плануємо публікувати в npm під @btw-studio у міру стабілізації тулів. Поки що — встановлення з GitHub, читайте README, відкривайте issue якщо щось ламається.',
+    },
+    colophon: {
+      eyebrow: 'Colophon · про цей сайт',
+      heading: 'Як зібраний цей сайт.',
+      intro:
+        'Стек, процес, receipts. Це запис, не кейс — ви вже на сайті, немає сенсу продавати його вам ще раз.',
+      stackHeading: 'Стек',
+      stackRows: [
+        { label: 'Framework', value: 'Next.js 15.5 App Router' },
+        { label: 'UI', value: 'React 19 · TypeScript · Tailwind v3' },
+        { label: 'Motion', value: 'Framer Motion + motion/react' },
+        { label: '3D hero', value: '@react-three/fiber 9 + drei 10' },
+        { label: 'Fonts', value: 'Instrument Serif · Inter Tight · JetBrains Mono' },
+        { label: 'Forms', value: 'react-hook-form + zod + Resend' },
+        { label: 'Hosting', value: 'Fly.io (fra · 512MB · 66MB image)' },
+        { label: 'CI/CD', value: 'GitHub Actions · flyctl deploy' },
+      ],
+      processHeading: 'Процес',
+      processSteps: [
+        'Агент product-manager написав PRD з brief одним абзацом.',
+        'Агент business-analyst створив REQ-N / TASK-N / SVC-N спеку.',
+        'Агент architect обрав стек + file layout + deploy target.',
+        'Агенти brand-identity + motion + 3d-scene зробили дизайн-доки.',
+        'Агент ux-designer перетворив вимоги у wireframes.',
+        'Агент developer імплементував секція за секцією з commit-ами на кожну.',
+        'Агенти reviewer + test-engineer + tester зробили QA.',
+        'Агент devops-automator налаштував GitHub Actions + Fly.io deploy.',
+      ],
+      receiptsHeading: 'Receipts',
+      creditsHeading: 'Credits',
+      credits:
+        'Концепт, бренд, копірайт, код: BTW Studio. Пайплайн оркестрований Claude Code + кастомний waterfall з 8 субагентів. Задеплоєний від спеки до продакшну за два календарні дні. Сорс цього сайту приватний — agent pack який його збирає публічний на github.com/workmailan8n-hash/btw-agents-pack.',
     },
     about: {
       heading: 'Про нас',

@@ -29,10 +29,12 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <nav aria-label="Footer navigation" className="flex gap-6 text-sm">
-          <Link href="/#work">{t.nav.work}</Link>
+        <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
           <Link href="/notes">{t.nav.notes}</Link>
+          <Link href="/labs">{t.nav.labs}</Link>
+          <Link href="/open-source">{t.nav.oss}</Link>
           <Link href="/about">{t.nav.about}</Link>
+          <Link href="/colophon">colophon</Link>
           <Link href="/contact">{t.nav.contact}</Link>
         </nav>
       </div>

@@ -11,8 +11,9 @@ export function SnakeMenu() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: '/#work', label: t.nav.work },
     { href: '/notes', label: t.nav.notes },
+    { href: '/labs', label: t.nav.labs },
+    { href: '/open-source', label: t.nav.oss },
     { href: '/about', label: t.nav.about },
     { href: '/contact', label: t.nav.contact },
   ];

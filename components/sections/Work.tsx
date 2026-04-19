@@ -19,19 +19,8 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: 'Agent Dashboard',
-    tagKey: 'Pixel-art agent visualizer',
-    year: '2026',
-    href: 'https://agent-dashboard-ancient-mountain-4835.fly.dev',
-    status: 'Live',
-    stack: ['Node.js', 'WebSocket', 'Canvas 2D', 'Fly.io'],
-    accent: '#9EFF6E',
-    gradient:
-      'radial-gradient(ellipse at 20% 30%, rgba(158,255,110,0.35), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(184,166,255,0.2), transparent 60%)',
-  },
-  {
     name: 'CourseAI',
-    tagKey: 'AI course generator',
+    tagKey: 'AI course generator · SaaS with Stripe',
     year: '2026',
     href: 'https://courseai-jade.vercel.app',
     status: 'Live',
@@ -42,46 +31,14 @@ const projects: Project[] = [
   },
   {
     name: 'Content Channel',
-    tagKey: 'Multi-platform publisher',
+    tagKey: 'Content ops automation · daily in production',
     year: '2025',
+    href: 'https://t.me/btw_aitech',
     status: 'Live',
     stack: ['Node.js', 'Grammy', 'Claude', 'Cron'],
     accent: '#9EFF6E',
     gradient:
       'radial-gradient(ellipse at 30% 60%, rgba(158,255,110,0.32), transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(255,184,107,0.2), transparent 60%)',
-  },
-  {
-    name: '@btw_aitech',
-    tagKey: 'Building in public',
-    year: '2026',
-    href: 'https://t.me/btw_aitech',
-    status: 'Live',
-    stack: ['Telegram', 'n8n', 'Obsidian', 'Notion'],
-    accent: '#FFB86B',
-    gradient:
-      'radial-gradient(ellipse at 50% 50%, rgba(255,184,107,0.32), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(184,166,255,0.2), transparent 60%)',
-  },
-  {
-    name: 'Claude Agents Marketplace',
-    tagKey: 'Public catalog · one-click install',
-    year: '2026',
-    href: 'https://agents-btw-studio.fly.dev',
-    status: 'Live',
-    stack: ['Next.js 15', 'Fuse.js', 'shiki', 'Fly.io'],
-    accent: '#B8A6FF',
-    gradient:
-      'radial-gradient(ellipse at 30% 30%, rgba(184,166,255,0.38), transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(158,255,110,0.18), transparent 60%)',
-  },
-  {
-    name: 'vault-sync',
-    tagKey: 'Obsidian → Notion · OSS CLI',
-    year: '2026',
-    href: 'https://github.com/workmailan8n-hash/vault-sync',
-    status: 'Live',
-    stack: ['Node.js', 'ESM', 'Notion API', 'gray-matter'],
-    accent: '#FFB86B',
-    gradient:
-      'radial-gradient(ellipse at 40% 40%, rgba(255,184,107,0.38), transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(184,166,255,0.18), transparent 60%)',
   },
 ];
 
@@ -268,6 +225,21 @@ export function Work() {
               )}
             </AnimatePresence>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-16 pt-8 border-t border-[color:var(--color-fg-dim)]/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 font-mono text-xs text-[color:var(--color-fg-meta)]">
+        <span>{t.work.alsoHint}</span>
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <a href="/labs" className="hover:text-[color:var(--color-accent)] transition-colors">
+            /labs — experiments &amp; internal tools →
+          </a>
+          <a
+            href="/open-source"
+            className="hover:text-[color:var(--color-accent)] transition-colors"
+          >
+            /open-source — MIT-licensed artefacts →
+          </a>
         </div>
       </div>
     </section>
