@@ -186,6 +186,57 @@ export const dict = {
       footnote:
         'We plan to publish to npm under @btw-studio as the tools stabilize. For now: install from GitHub, read the README, open an issue if something breaks.',
     },
+    pilot: {
+      eyebrow: 'Pilot offer · limited to 3 slots',
+      heading: 'Free AI booking bot. 14 days. Then you decide.',
+      intro:
+        'We build a production-grade Telegram booking bot tailored to your salon, clinic or service business at zero cost to you. You use it for 30 days. If it works — you keep it and write a short testimonial. If not — no obligation, we walk away.',
+      weGive: {
+        heading: 'What we deliver',
+        items: [
+          'Custom Telegram bot branded for your business',
+          'Working booking flow: services → slot → confirmation',
+          'Automated reminders (24h and 1h before appointment)',
+          'Admin panel to manage slots, services and prices',
+          'Deploy + hosting for the first 30 days (we pay)',
+          'Handoff docs so you own everything afterwards',
+        ],
+      },
+      youGive: {
+        heading: 'What we ask in return',
+        items: [
+          '~2 hours for onboarding call + follow-up feedback',
+          'Access to point list of services and opening hours',
+          '30 days of honest usage — we check in weekly',
+          'A short testimonial + anonymized metrics if it works',
+        ],
+      },
+      featuresHeading: 'The bot handles',
+      features: [
+        'Browse services with price + duration',
+        'Pick an available time slot (timezone-aware)',
+        'Confirmation message with booking reference',
+        'Automated reminders so no-shows drop',
+        'Cancel / reschedule in one click',
+        'Admin Telegram notifications when new booking lands',
+      ],
+      timelineHeading: 'Two-week timeline',
+      timeline: [
+        { when: 'Day 0', what: 'Onboarding call — services, hours, booking rules' },
+        { when: 'Day 1-3', what: 'We build the bot + admin panel' },
+        { when: 'Day 4', what: 'Staging deploy — you test, we iterate' },
+        { when: 'Day 7', what: 'Production launch — first real bookings' },
+        { when: 'Day 14', what: 'Mid-pilot check-in + first metrics' },
+        { when: 'Day 30', what: 'Final call — keep it or walk away' },
+      ],
+      ctaHeading: 'Interested?',
+      ctaBody:
+        'Three pilot slots available this month. First-come, first-served. We only take pilots where we think we can actually move the numbers — honest mutual fit beats fast sign-up.',
+      ctaPrimary: 'Apply for pilot →',
+      ctaSecondary: 'Read our studio notes',
+      ctaFine:
+        'We run BTW Studio. Pilot outcome → case study → we can bring you 2-3x more clients via the bot story. Win-win.',
+    },
     colophon: {
       eyebrow: 'Colophon · about this site',
       heading: 'How this site was built.',
@@ -433,6 +484,57 @@ export const dict = {
         'Маленькі сфокусовані тули, виділені з нашої внутрішньої інфраструктури. Ліцензія MIT. Користуйтесь, форкайте, релізте. Без support-контракту, без апселла. Нам було потрібно — ми написали, і здалося корисним опублікувати.',
       footnote:
         'Плануємо публікувати в npm під @btw-studio у міру стабілізації тулів. Поки що — встановлення з GitHub, читайте README, відкривайте issue якщо щось ламається.',
+    },
+    pilot: {
+      eyebrow: 'Pilot offer · 3 місця на місяць',
+      heading: 'Безкоштовний AI booking-бот. 14 днів. Далі ви вирішуєте.',
+      intro:
+        "Ми робимо production-grade Telegram booking-бот під ваш салон, клініку чи сервіс — за 0 грн. Ви користуєтесь 30 днів. Працює — лишаєте собі і пишете короткий відгук. Не працює — ніяких зобов'язань, ми йдемо.",
+      weGive: {
+        heading: 'Що ми даємо',
+        items: [
+          'Кастомний Telegram-бот з брендингом вашого бізнесу',
+          'Робочий flow бронювання: послуги → слот → підтвердження',
+          'Автонагадування (24h і 1h до візиту)',
+          'Адмінка для керування слотами, послугами, цінами',
+          'Deploy + хостинг перші 30 днів (за наш кошт)',
+          'Handoff-документація — після 30 днів ви володієте всім',
+        ],
+      },
+      youGive: {
+        heading: 'Що просимо взамін',
+        items: [
+          '~2 години: onboarding call + follow-up feedback',
+          'Список послуг + години роботи',
+          '30 днів чесного користування — перевіряємось щотижня',
+          'Короткий відгук + анонімізовані метрики якщо спрацювало',
+        ],
+      },
+      featuresHeading: 'Бот вміє',
+      features: [
+        'Показати послуги з ціною + тривалістю',
+        'Обрати вільний слот (з урахуванням таймзони)',
+        'Підтвердження з номером бронювання',
+        'Автонагадування щоб no-show впав',
+        'Скасувати / перенести в 1 клік',
+        'Адмін-сповіщення у ваш Telegram про нові записи',
+      ],
+      timelineHeading: 'Два тижні',
+      timeline: [
+        { when: 'День 0', what: 'Onboarding call — послуги, години, правила бронювання' },
+        { when: 'День 1-3', what: 'Ми збираємо бот + адмінку' },
+        { when: 'День 4', what: 'Staging deploy — ви тестуєте, ми допилюємо' },
+        { when: 'День 7', what: 'Production launch — перші реальні бронювання' },
+        { when: 'День 14', what: 'Проміжний check-in + перші метрики' },
+        { when: 'День 30', what: 'Фінальний дзвінок — залишаємо чи прощаємось' },
+      ],
+      ctaHeading: 'Цікаво?',
+      ctaBody:
+        'Три pilot-слоти на місяць. Хто перший — того і тапки. Беремо тільки тих, де бачимо шанс реально рухнути цифри — чесний fit > швидка реєстрація.',
+      ctaPrimary: 'Подати заявку →',
+      ctaSecondary: 'Читати нотатки студії',
+      ctaFine:
+        'Ми ведемо BTW Studio. Результати pilot → case study → можемо привести вам 2-3x клієнтів через історію бота. Win-win.',
     },
     colophon: {
       eyebrow: 'Colophon · про цей сайт',
