@@ -76,7 +76,15 @@ function StatItem({
     >
       <div className="flex items-baseline gap-1">
         <span className="font-[var(--font-display)] text-5xl md:text-7xl tracking-[-0.03em] text-[color:var(--color-fg-primary)]">
-          {stat.numeric ? <motion.span>{rounded}</motion.span> : stat.value}
+          {stat.numeric ? (
+            inView ? (
+              <motion.span>{rounded}</motion.span>
+            ) : (
+              <span>{stat.value}</span>
+            )
+          ) : (
+            stat.value
+          )}
         </span>
         <span className="font-[var(--font-display)] text-3xl md:text-5xl text-[color:var(--color-accent)]">
           {stat.suffix}

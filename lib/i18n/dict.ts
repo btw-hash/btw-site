@@ -5,6 +5,7 @@ export const dict = {
     nav: {
       work: 'work',
       notes: 'notes',
+      writing: 'writing',
       labs: 'labs',
       oss: 'open source',
       about: 'about',
@@ -305,6 +306,7 @@ export const dict = {
     nav: {
       work: 'роботи',
       notes: 'нотатки',
+      writing: 'статті',
       labs: 'labs',
       oss: 'open source',
       about: 'про нас',
