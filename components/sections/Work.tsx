@@ -40,6 +40,28 @@ const projects: Project[] = [
     gradient:
       'radial-gradient(ellipse at 30% 60%, rgba(158,255,110,0.32), transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(255,184,107,0.2), transparent 60%)',
   },
+  {
+    name: 'Nox',
+    tagKey: 'Personal TG assistant · single-user by design',
+    year: '2026',
+    href: '/notes/nox',
+    status: 'Live',
+    stack: ['TypeScript', 'grammY', 'Claude Sonnet', 'SQLite'],
+    accent: '#6EA8FF',
+    gradient:
+      'radial-gradient(ellipse at 25% 30%, rgba(110,168,255,0.4), transparent 55%), radial-gradient(ellipse at 80% 70%, rgba(184,166,255,0.22), transparent 60%)',
+  },
+  {
+    name: 'Agent Dashboard',
+    tagKey: 'Realtime pixel-art office for LLM agents',
+    year: '2026',
+    href: '/notes/agent-dashboard',
+    status: 'Live',
+    stack: ['Node.js', 'WebSocket', 'Canvas 2D', 'Vite'],
+    accent: '#9EFF6E',
+    gradient:
+      'radial-gradient(ellipse at 30% 25%, rgba(158,255,110,0.35), transparent 60%), radial-gradient(ellipse at 80% 75%, rgba(110,168,255,0.2), transparent 60%)',
+  },
 ];
 
 export function Work() {

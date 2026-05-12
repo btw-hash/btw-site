@@ -185,6 +185,55 @@ export function NoteArt({ slug, color }: { slug: string; color: string }) {
     );
   }
 
+  if (slug === 'nox') {
+    // Moon glyph + 8 satellite dots (one per Mini App tab)
+    return (
+      <svg {...common}>
+        <motion.circle
+          cx={100}
+          cy={60}
+          r={22}
+          fill={color}
+          opacity={0.85}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <motion.circle
+          cx={110}
+          cy={52}
+          r={20}
+          fill="black"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        />
+        {Array.from({ length: 8 }).map((_, i) => {
+          const a = (i / 8) * Math.PI * 2 - Math.PI / 2;
+          const rx = 60;
+          const ry = 38;
+          const cx = 100 + Math.cos(a) * rx;
+          const cy = 60 + Math.sin(a) * ry;
+          return (
+            <motion.circle
+              key={i}
+              cx={cx}
+              cy={cy}
+              r={2.6}
+              fill={color}
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 0.85 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.5 + i * 0.07 }}
+            />
+          );
+        })}
+      </svg>
+    );
+  }
+
   // Fallback — subtle dot grid
   return (
     <svg {...common}>

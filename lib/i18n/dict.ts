@@ -75,6 +75,9 @@ export const dict = {
         'AI course generator · SaaS with Stripe': 'AI course generator · SaaS with Stripe',
         'Content ops automation · daily in production':
           'Content ops automation · daily in production',
+        'Personal TG assistant · single-user by design':
+          'Personal TG assistant · single-user by design',
+        'Realtime pixel-art office for LLM agents': 'Realtime pixel-art office for LLM agents',
         'Pixel-art agent visualizer': 'Pixel-art agent visualizer',
         'AI course generator': 'AI course generator',
         'Stealth · internal tool': 'Stealth · internal tool',
@@ -153,6 +156,7 @@ export const dict = {
       byTheNumbers: 'By the numbers',
       stack: 'Stack',
       role: 'Role',
+      gallery: 'In action',
       openProject: 'Open project ↗',
       ctaHeading: 'Have a similar project?',
       ctaBody: 'We reply within 24 hours. Usually faster.',
@@ -378,6 +382,9 @@ export const dict = {
         'AI course generator · SaaS with Stripe': 'AI-генератор курсів · SaaS зі Stripe',
         'Content ops automation · daily in production':
           'Content-ops автоматизація · щодня в продакшні',
+        'Personal TG assistant · single-user by design':
+          'Особистий TG-асистент · single-user by design',
+        'Realtime pixel-art office for LLM agents': 'Realtime піксель-арт офіс для LLM-агентів',
         'Stealth · internal tool': 'Stealth · внутрішній тул',
         'Stealth · AI infra': 'Stealth · AI-інфра',
         'Multi-platform publisher': 'Мультиплатформений паблішер',
@@ -453,6 +460,7 @@ export const dict = {
       byTheNumbers: 'У цифрах',
       stack: 'Стек',
       role: 'Роль',
+      gallery: 'У дії',
       openProject: 'Відкрити проєкт ↗',
       ctaHeading: 'Є подібний проєкт?',
       ctaBody: 'Відповідаємо за 24 години. Зазвичай швидше.',
