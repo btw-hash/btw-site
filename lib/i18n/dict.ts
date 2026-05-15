@@ -278,11 +278,10 @@ export const dict = {
       eyebrow: 'Keyst · self-hosted storefront',
       heroBadge: 'New from BTW Studio',
       heroTitle: 'Own-your-stack white-label storefront for digital key resellers.',
-      heroSub:
-        'Sellix is gone. Sellpass renamed to Antistock. Don't rent your store — own it.',
+      heroSub: 'Sellix is gone. Sellpass renamed to Antistock. Don’t rent your store — own it.',
       heroCta: 'View live demo →',
       heroCtaSecondary: 'Get Keyst — $499',
-      problemHeading: 'The platform risk you're ignoring',
+      problemHeading: 'The platform risk you’re ignoring',
       problemCards: [
         {
           title: 'Platforms disappear overnight',
@@ -290,7 +289,7 @@ export const dict = {
         },
         {
           title: 'Stripe and PayPal ban digital keys',
-          body: 'Both processors explicitly prohibit digital activation key sales in their ToS. If you're using them, you're one chargeback report from a permanent ban.',
+          body: 'Both processors explicitly prohibit digital activation key sales in their ToS. If you’re using them, you’re one chargeback report from a permanent ban.',
         },
         {
           title: 'Marketplace fees eat 5–10% per sale',
@@ -346,15 +345,33 @@ export const dict = {
       ],
       howHeading: 'How it works',
       howSteps: [
-        { n: '01', title: 'Pay', body: 'Choose your plan and complete payment. You'll receive a confirmation within minutes.' },
-        { n: '02', title: 'We install', body: 'We deploy Keyst on your VPS within 48 hours — Docker, Postgres, Redis, all wired.' },
-        { n: '03', title: 'Setup Wizard', body: 'A 5-step wizard walks you through branding, payment gateway, and first product.' },
-        { n: '04', title: 'Start selling', body: 'Your store is live. Customers buy, keys are delivered atomically, crypto works out of the box.' },
+        {
+          n: '01',
+          title: 'Pay',
+          body: 'Choose your plan and complete payment. You’ll receive a confirmation within minutes.',
+        },
+        {
+          n: '02',
+          title: 'We install',
+          body: 'We deploy Keyst on your VPS within 48 hours — Docker, Postgres, Redis, all wired.',
+        },
+        {
+          n: '03',
+          title: 'Setup Wizard',
+          body: 'A 5-step wizard walks you through branding, payment gateway, and first product.',
+        },
+        {
+          n: '04',
+          title: 'Start selling',
+          body: 'Your store is live. Customers buy, keys are delivered atomically, crypto works out of the box.',
+        },
       ],
       demoHeading: 'See it live',
-      demoBody: 'The demo runs a real Keyst instance with sample catalog — Steam gift cards, Xbox subscriptions, PSN credits. Admin and customer sessions both available.',
+      demoBody:
+        'The demo runs a real Keyst instance with sample catalog — Steam gift cards, Xbox subscriptions, PSN credits. Admin and customer sessions both available.',
       demoCta: 'Try the live demo →',
-      demoNote: 'Admin: demo-admin@codes-shop.dev / CodesShop2026Demo! · Customer: demo-customer@codes-shop.dev / Customer2026Demo!',
+      demoNote:
+        'Admin: demo-admin@codes-shop.dev / CodesShop2026Demo! · Customer: demo-customer@codes-shop.dev / Customer2026Demo!',
       faqHeading: 'FAQ',
       installService: {
         title: 'Install for me',
@@ -369,7 +386,7 @@ export const dict = {
         ],
         cta: 'Add install — pay total: $649 →',
         ctaAlt: 'or $1,049 with Code + Docs',
-        fine: 'If you can run one terminal command, you don\'t need this — the bootstrap script handles everything.',
+        fine: "If you can run one terminal command, you don't need this — the bootstrap script handles everything.",
       },
       faqItems: [
         {
@@ -725,7 +742,7 @@ export const dict = {
         },
         {
           title: 'Stripe і PayPal забороняють цифрові ключі',
-          body: "Обидва процесори прямо забороняють продаж ключів активації у своїх ToS. Якщо ви їх використовуєте — один звіт про chargeback може закрити рахунок назавжди.",
+          body: 'Обидва процесори прямо забороняють продаж ключів активації у своїх ToS. Якщо ви їх використовуєте — один звіт про chargeback може закрити рахунок назавжди.',
         },
         {
           title: 'Комісії маркетплейсів — 5–10% з продажу',
@@ -781,10 +798,26 @@ export const dict = {
       ],
       howHeading: 'Як це працює',
       howSteps: [
-        { n: '01', title: 'Оплата', body: 'Оберіть план і завершіть оплату. Підтвердження прийде за кілька хвилин.' },
-        { n: '02', title: 'Ми встановлюємо', body: 'Розгортаємо Keyst на вашому VPS за 48 год — Docker, Postgres, Redis, все підключено.' },
-        { n: '03', title: 'Setup Wizard', body: '5-кроковий майстер налаштування: брендинг, платіжний шлюз, перший товар.' },
-        { n: '04', title: 'Починайте продавати', body: 'Ваш магазин живий. Покупці купують, ключі видаються атомарно, крипто працює з коробки.' },
+        {
+          n: '01',
+          title: 'Оплата',
+          body: 'Оберіть план і завершіть оплату. Підтвердження прийде за кілька хвилин.',
+        },
+        {
+          n: '02',
+          title: 'Ми встановлюємо',
+          body: 'Розгортаємо Keyst на вашому VPS за 48 год — Docker, Postgres, Redis, все підключено.',
+        },
+        {
+          n: '03',
+          title: 'Setup Wizard',
+          body: '5-кроковий майстер налаштування: брендинг, платіжний шлюз, перший товар.',
+        },
+        {
+          n: '04',
+          title: 'Починайте продавати',
+          body: 'Ваш магазин живий. Покупці купують, ключі видаються атомарно, крипто працює з коробки.',
+        },
       ],
       demoHeading: 'Подивіться живий приклад',
       demoBody:

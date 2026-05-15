@@ -7,7 +7,6 @@ import { motion } from 'motion/react';
  * Keyed by slug. Each SVG is tuned to the project's domain:
  * - agent-dashboard       → pixel grid (realtime viz)
  * - courseai              → cascading module bars (course structure)
- * - content-channel       → radiating pulse waves (publishing)
  * - btw-studio-site       → orbiting rings (brand)
  */
 export function NoteArt({ slug, color }: { slug: string; color: string }) {
@@ -91,30 +90,6 @@ export function NoteArt({ slug, color }: { slug: string; color: string }) {
             transition={{ duration: 0.5, delay: 0.1 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
           />
         ))}
-      </svg>
-    );
-  }
-
-  if (slug === 'content-channel') {
-    // Radiating rings from a central dot
-    return (
-      <svg {...common}>
-        {[40, 28, 18, 10].map((r, i) => (
-          <motion.circle
-            key={i}
-            cx={100}
-            cy={60}
-            r={r}
-            stroke={color}
-            strokeWidth={0.8}
-            opacity={0.2 + i * 0.15}
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 0.2 + i * 0.15 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 + i * 0.08 }}
-          />
-        ))}
-        <circle cx={100} cy={60} r={3} fill={color} />
       </svg>
     );
   }

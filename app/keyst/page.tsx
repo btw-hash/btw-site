@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Keyst — Own your storefront, own your stack',
     description:
-      'Self-hosted white-label storefront for digital key resellers. Sellix is gone. Don't rent your store — own it.',
+      'Self-hosted white-label storefront for digital key resellers. Sellix is gone. Don’t rent your store — own it.',
   },
 };
 

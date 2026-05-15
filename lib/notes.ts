@@ -140,51 +140,6 @@ export const notes: CaseStudy[] = [
     ],
   },
   {
-    slug: 'content-channel',
-    title: 'Content Channel',
-    tagline:
-      'Automated content pipeline — one Obsidian note goes live across Telegram, LinkedIn and Instagram on schedule. Zero copy-paste.',
-    year: '2025',
-    status: 'Live',
-    // Subsumed by Nox (2026-04-28, see vault/projects/Nox.md). Hidden from index/homepage.
-    // Detail page at /notes/content-channel remains accessible for legacy links.
-    hidden: true,
-    role: 'Content ops automation · we eat our own dogfood',
-    timeline: '2 weeks · Nov 2025',
-    href: 'https://t.me/btw_aitech',
-    accent: '#FFB86B',
-    gradient:
-      'radial-gradient(ellipse at 30% 60%, rgba(255,184,107,0.35), transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(158,255,110,0.2), transparent 60%)',
-    stack: ['Node.js', 'Grammy (Telegram)', 'Claude', 'n8n', 'Cron', 'Express', 'Obsidian sync'],
-    metrics: [
-      { value: '3', label: 'Platforms auto-published' },
-      { value: 'daily', label: 'Publishing cadence held' },
-      { value: '2 weeks', label: 'Idea → live pipeline' },
-      { value: 'live', label: 'Running in production since Nov 2025' },
-    ],
-    tags: ['automation', 'content', 'service'],
-    receipts: {
-      agents: ['architect', 'telegram-bot-expert', 'prompt-engineer', 'developer'],
-      commits: 80,
-      deploys: 4,
-      shippedIn: '2 weeks',
-    },
-    sections: [
-      {
-        heading: 'Context',
-        body: 'Cross-platform content duplication is the #1 reason content pipelines die. We needed one writing surface (Obsidian) and automated downstream publishing to Telegram, LinkedIn and Instagram. We built it for ourselves first — now we ship the same pipeline to studios, solo creators and small teams who want content ops without the copy-paste tax.',
-      },
-      {
-        heading: 'Approach',
-        body: 'Obsidian stays the authoring layer — that is where work actually happens. A Node service watches the vault, extracts publish-ready markdown, uses Claude to adapt tone per platform (short Telegram post, structured LinkedIn with hook, Instagram caption with hashtags), and schedules delivery through Grammy + platform APIs. n8n orchestrates retries and batches.',
-      },
-      {
-        heading: 'Outcome',
-        body: 'Our public channel @btw_aitech runs on this pipeline daily since November 2025. Two weeks from idea to live, held daily cadence since. The service offering: same setup adapted to your vault and your platforms in two weeks. You write once, we handle the rest.',
-      },
-    ],
-  },
-  {
     slug: 'nox',
     title: 'Nox',
     tagline:
@@ -246,6 +201,12 @@ export const notes: CaseStudy[] = [
         caption: 'Content composer',
       },
       { kind: 'image', src: '/notes/nox/email.png', aspect: 'phone', caption: 'Email triage' },
+      {
+        kind: 'image',
+        src: '/notes/nox/projects.png',
+        aspect: 'phone',
+        caption: 'Projects overview',
+      },
       { kind: 'image', src: '/notes/nox/chat.png', aspect: 'phone', caption: 'Chat with Sonnet' },
       { kind: 'image', src: '/notes/nox/news.png', aspect: 'phone', caption: 'News feed' },
     ],
@@ -295,6 +256,50 @@ export const notes: CaseStudy[] = [
       { value: '$499', label: 'Setup price' },
     ],
     tags: ['product', 'ecommerce', 'self-hosted'],
+    media: [
+      {
+        kind: 'image',
+        src: '/notes/keyst/storefront.png',
+        aspect: 'wide',
+        caption: 'Storefront — seeded catalog (Steam, PlayStation, Xbox, Apple, Nintendo)',
+      },
+      {
+        kind: 'image',
+        src: '/notes/keyst/catalog.png',
+        aspect: 'wide',
+        caption: 'Category page — Steam keys grid',
+      },
+      {
+        kind: 'image',
+        src: '/notes/keyst/product.png',
+        aspect: 'wide',
+        caption: 'Product detail — price + crypto checkout',
+      },
+      {
+        kind: 'image',
+        src: '/notes/keyst/admin-dashboard.png',
+        aspect: 'wide',
+        caption: 'Admin dashboard — GMV, orders, AOV, low-stock',
+      },
+      {
+        kind: 'image',
+        src: '/notes/keyst/admin-orders.png',
+        aspect: 'wide',
+        caption: 'Orders — paid/delivered status, key issuance log',
+      },
+      {
+        kind: 'image',
+        src: '/notes/keyst/setup-wizard.png',
+        aspect: 'wide',
+        caption: 'Setup wizard — branding step (VPS-to-live in <45min)',
+      },
+      {
+        kind: 'image',
+        src: '/notes/keyst/storefront-mobile.png',
+        aspect: 'phone',
+        caption: 'Mobile storefront',
+      },
+    ],
     sections: [
       {
         heading: 'Context',
@@ -370,6 +375,24 @@ export const notes: CaseStudy[] = [
         src: '/notes/agent-dashboard/details.png',
         aspect: 'wide',
         caption: 'Sidebar + activity ticker',
+      },
+      {
+        kind: 'image',
+        src: '/notes/agent-dashboard/office-wide.png',
+        aspect: 'wide',
+        caption: 'Full office floor with HVAC + decor',
+      },
+      {
+        kind: 'image',
+        src: '/notes/agent-dashboard/leaderboard.png',
+        aspect: 'wide',
+        caption: 'Leaderboard — per-agent activity ranking',
+      },
+      {
+        kind: 'image',
+        src: '/notes/agent-dashboard/settings.png',
+        aspect: 'wide',
+        caption: 'Settings panel',
       },
     ],
     sections: [
