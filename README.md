@@ -19,7 +19,7 @@ RESEND_API_KEY=re_...
 RESEND_FROM="BTW <hello@btw.studio>"
 RESEND_TO=hello@btw.studio
 TG_BOT_TOKEN=...
-TG_OWNER_CHAT_ID=397649588
+TG_OWNER_CHAT_ID=<your-numeric-chat-id>
 ```
 
 Without these, the contact form still accepts submissions (logged to console); no email or TG notification is sent.
@@ -40,7 +40,7 @@ fly secrets set RESEND_API_KEY=re_...
 fly secrets set RESEND_FROM="BTW <hello@btw.studio>"
 fly secrets set RESEND_TO=hello@btw.studio
 fly secrets set TG_BOT_TOKEN=...
-fly secrets set TG_OWNER_CHAT_ID=397649588
+fly secrets set TG_OWNER_CHAT_ID=<your-numeric-chat-id>
 fly secrets set NEXT_PUBLIC_SITE_URL=https://btw-site.fly.dev
 
 # Deploy
