@@ -23,7 +23,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://btw-site.fly.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://btwstudio.dev'),
   title: {
     default: 'BTW. — We ship apps, by the way.',
     template: '%s — BTW.',

@@ -234,7 +234,7 @@ export const notes: CaseStudy[] = [
     status: 'Live',
     role: 'Product · full-cycle from spec to sales surface',
     timeline: '4 weeks · May 2026',
-    href: 'https://keyst-demo.fly.dev',
+    href: 'https://keyst.btwstudio.dev',
     overrideHref: '/keyst',
     accent: '#E8274B',
     gradient:
@@ -311,7 +311,7 @@ export const notes: CaseStudy[] = [
       },
       {
         heading: 'Outcome',
-        body: 'Live demo at keyst-demo.fly.dev. Setup Wizard takes a blank VPS to a live, branded store in under 45 minutes. Product page at btw-studio.fly.dev/keyst. First customer target: June 2026.',
+        body: 'Live demo at keyst.btwstudio.dev. Setup Wizard takes a blank VPS to a live, branded store in under 45 minutes. Product page at btwstudio.dev/keyst. First customer target: June 2026.',
       },
     ],
   },
