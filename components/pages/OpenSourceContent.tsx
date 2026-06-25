@@ -24,7 +24,7 @@ export function OpenSourceContent() {
         <ProjectTile
           title="vault-sync"
           tagline="Node CLI for one-way Obsidian vault → Notion sync. Frontmatter is the contract. Extracted from our internal publishing pipeline."
-          href="https://github.com/workmailan8n-hash/vault-sync"
+          href="https://github.com/btw-hash/vault-sync"
           year="2026"
           status="MIT"
           accent="#FFB86B"
@@ -41,7 +41,7 @@ export function OpenSourceContent() {
         <ProjectTile
           title="btw-agents-pack"
           tagline="37 Claude Code subagents + 17 skills in one repo. MIT. Copy-paste install. The same agents this studio runs in production."
-          href="https://github.com/workmailan8n-hash/btw-agents-pack"
+          href="https://github.com/btw-hash/btw-agents-pack"
           year="2026"
           status="MIT"
           accent="#B8A6FF"

@@ -272,7 +272,7 @@ export const dict = {
       receiptsHeading: 'Receipts',
       creditsHeading: 'Credits',
       credits:
-        'Concept, brand, copy, code: BTW Studio. Pipeline orchestrated with Claude Code + a custom waterfall of 8 subagents. Deployed from spec to production in two calendar days. Source for this site is private — the agent pack that ships it is public at github.com/workmailan8n-hash/btw-agents-pack.',
+        'Concept, brand, copy, code: BTW Studio. Pipeline orchestrated with Claude Code + a custom waterfall of 8 subagents. Deployed from spec to production in two calendar days. Source for this site is private — the agent pack that ships it is public at github.com/btw-hash/btw-agents-pack.',
     },
     keyst: {
       eyebrow: 'Keyst · self-hosted storefront',
@@ -724,7 +724,7 @@ export const dict = {
       receiptsHeading: 'Receipts',
       creditsHeading: 'Credits',
       credits:
-        'Концепт, бренд, копірайт, код: BTW Studio. Пайплайн оркестрований Claude Code + кастомний waterfall з 8 субагентів. Задеплоєний від спеки до продакшну за два календарні дні. Сорс цього сайту приватний — agent pack який його збирає публічний на github.com/workmailan8n-hash/btw-agents-pack.',
+        'Концепт, бренд, копірайт, код: BTW Studio. Пайплайн оркестрований Claude Code + кастомний waterfall з 8 субагентів. Задеплоєний від спеки до продакшну за два календарні дні. Сорс цього сайту приватний — agent pack який його збирає публічний на github.com/btw-hash/btw-agents-pack.',
     },
     keyst: {
       eyebrow: 'Keyst · self-hosted storefront',
