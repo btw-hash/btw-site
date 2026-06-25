@@ -300,8 +300,8 @@ export function AgentDashboardEssay() {
               /labs
             </Link>
             . The code is private; the agent pack that ships it is public at{' '}
-            <ExtA href="https://github.com/workmailan8n-hash/btw-agents-pack">
-              github.com/workmailan8n-hash/btw-agents-pack
+            <ExtA href="https://github.com/btw-hash/btw-agents-pack">
+              github.com/btw-hash/btw-agents-pack
             </ExtA>
             .
           </P>
