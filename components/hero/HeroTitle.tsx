@@ -14,14 +14,14 @@ export function HeroTitle() {
     <h1
       id="hero-heading"
       ref={ref}
-      className="font-[var(--font-display)] text-[clamp(3rem,10vw,9rem)] leading-[1.1] tracking-[-0.03em] text-[color:var(--color-fg-primary)] pb-4"
+      className="font-[var(--font-display)] text-[clamp(3.25rem,9.5vw,10rem)] leading-[1.02] tracking-[-0.035em] text-[color:var(--color-fg-primary)] pb-2"
     >
       <span className="sr-only">{words.join(' ')}</span>
       <span aria-hidden className="block" key={locale}>
         {words.map((word, i) => (
           <motion.span
             key={`${word}-${i}`}
-            className="inline-block mr-[0.22em] align-baseline"
+            className="inline-block mr-[0.2em] align-baseline"
             initial={{ opacity: 0, y: '30%', filter: 'blur(6px)' }}
             animate={{ opacity: 1, y: '0%', filter: 'blur(0px)' }}
             transition={{

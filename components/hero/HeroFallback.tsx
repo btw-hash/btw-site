@@ -18,10 +18,10 @@ export function HeroFallback() {
 
       {/* Lime + violet radial glow */}
       <div
-        className="absolute inset-0 opacity-70 pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle at 65% 45%, rgba(158,255,110,0.16) 0%, rgba(184,166,255,0.08) 30%, transparent 65%)',
+            'radial-gradient(ellipse at 60% 40%, rgba(158,255,110,0.12) 0%, rgba(184,166,255,0.07) 35%, transparent 68%)',
         }}
       />
 
@@ -42,12 +42,13 @@ export function HeroFallback() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-        className="relative z-10 w-[260px] h-[320px] sm:w-[280px] sm:h-[360px] rounded-[6px] flex flex-col items-center justify-center"
+        className="relative z-10 w-[240px] h-[300px] sm:w-[260px] sm:h-[340px] rounded-[3px] flex flex-col items-center justify-center"
         style={{
-          background: 'linear-gradient(135deg, rgba(232,232,240,0.08), rgba(232,232,240,0.02))',
-          backdropFilter: 'blur(24px)',
-          border: '1px solid rgba(245,245,247,0.1)',
-          boxShadow: '0 0 80px rgba(158,255,110,0.1), inset 0 0 40px rgba(184,166,255,0.06)',
+          background: 'linear-gradient(145deg, rgba(240,240,243,0.06), rgba(240,240,243,0.015))',
+          backdropFilter: 'blur(32px)',
+          border: '1px solid rgba(245,245,247,0.08)',
+          boxShadow:
+            '0 0 60px rgba(158,255,110,0.07), 0 0 120px rgba(184,166,255,0.04), inset 0 1px 0 rgba(245,245,247,0.07)',
         }}
       >
         <span

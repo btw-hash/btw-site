@@ -10,7 +10,10 @@ export function SiteFooter() {
   return (
     <footer
       role="contentinfo"
-      className="mt-40 border-t border-[color:var(--color-fg-dim)]/30 px-6 md:px-12 lg:px-20 py-16"
+      className="mt-32 border-t border-[color:var(--color-fg-dim)]/20 px-6 md:px-12 lg:px-20 py-14"
+      style={{
+        background: 'linear-gradient(180deg, var(--color-bg-base) 0%, var(--color-bg-elev-1) 100%)',
+      }}
     >
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div>

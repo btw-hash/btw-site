@@ -53,17 +53,17 @@ function Blob() {
         <icosahedronGeometry args={[1.4, 48]} />
         <MeshDistortMaterial
           ref={material}
-          color="#2A2A38"
-          roughness={0.1}
-          metalness={0.5}
+          color="#1e1e2a"
+          roughness={0.08}
+          metalness={0.45}
           iridescence={1.0}
-          iridescenceIOR={1.5}
-          iridescenceThicknessRange={[100, 900]}
+          iridescenceIOR={1.6}
+          iridescenceThicknessRange={[80, 1000]}
           clearcoat={1}
-          clearcoatRoughness={0.06}
-          distort={0.55}
-          speed={2.8}
-          envMapIntensity={1.6}
+          clearcoatRoughness={0.04}
+          distort={0.5}
+          speed={2.4}
+          envMapIntensity={2.0}
         />
       </mesh>
     </Float>
@@ -130,11 +130,12 @@ export function HeroScene() {
       {/* Camera offset to the left → scene renders right-of-center on canvas */}
       <PerspectiveCamera makeDefault fov={36} position={[-1.6, 0, 5.4]} />
       <Suspense fallback={null}>
-        <ambientLight intensity={0.25} />
-        <directionalLight position={[3, 4, 5]} intensity={1.4} />
-        <pointLight position={[-3, 2, 2]} intensity={1.8} color="#B8A6FF" />
-        <pointLight position={[3, -2, -2]} intensity={1.5} color="#9EFF6E" />
-        <pointLight position={[0, 0, 3]} intensity={0.6} color="#FFB86B" />
+        <ambientLight intensity={0.18} />
+        <directionalLight position={[4, 5, 6]} intensity={1.2} color="#f0f0f3" />
+        <pointLight position={[-3.5, 2.5, 2]} intensity={2.0} color="#B8A6FF" />
+        <pointLight position={[3.5, -2, -1]} intensity={1.6} color="#9EFF6E" />
+        <pointLight position={[0, 1, 4]} intensity={0.5} color="#FFB86B" />
+        <pointLight position={[0, -3, 1]} intensity={0.4} color="#6EA8FF" />
 
         <Blob />
 

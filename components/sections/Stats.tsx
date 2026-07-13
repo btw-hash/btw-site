@@ -19,12 +19,12 @@ export function Stats() {
   return (
     <section
       aria-labelledby="stats-heading"
-      className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28 border-y border-[color:var(--color-fg-dim)]/30"
+      className="relative px-6 md:px-12 lg:px-20 py-20 md:py-28 border-y border-[color:var(--color-fg-dim)]/25"
+      style={{
+        background: 'linear-gradient(180deg, var(--color-bg-elev-1) 0%, var(--color-bg-base) 100%)',
+      }}
     >
-      <h2
-        id="stats-heading"
-        className="font-[var(--font-sans-alt)] text-xs uppercase tracking-[0.15em] text-[color:var(--color-fg-muted)] mb-12"
-      >
+      <h2 id="stats-heading" className="section-label mb-12 md:mb-16">
         {t.stats.heading}
       </h2>
 
@@ -74,8 +74,8 @@ function StatItem({
       transition={{ duration: 0.7, ease: ease.expoOut, delay: index * 0.08 }}
       className="relative"
     >
-      <div className="flex items-baseline gap-1">
-        <span className="font-[var(--font-display)] text-5xl md:text-7xl tracking-[-0.03em] text-[color:var(--color-fg-primary)]">
+      <div className="flex items-baseline gap-1.5">
+        <span className="font-[var(--font-display)] text-[3.5rem] md:text-[5rem] leading-none tracking-[-0.04em] text-[color:var(--color-fg-primary)]">
           {stat.numeric ? (
             inView ? (
               <motion.span>{rounded}</motion.span>
@@ -86,42 +86,42 @@ function StatItem({
             stat.value
           )}
         </span>
-        <span className="font-[var(--font-display)] text-3xl md:text-5xl text-[color:var(--color-accent)]">
+        <span className="font-[var(--font-display)] text-[2rem] md:text-[3rem] leading-none tracking-[-0.02em] text-[color:var(--color-accent)]">
           {stat.suffix}
         </span>
       </div>
 
-      {/* Sparkline-like accent underline */}
+      {/* Accent underline rule */}
       <motion.div
         aria-hidden
-        className="mt-3 h-[2px] relative overflow-hidden"
+        className="mt-4 h-px relative overflow-hidden"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.5, delay: index * 0.08 + 0.3 }}
+        transition={{ duration: 0.4, delay: index * 0.08 + 0.25 }}
       >
         <div
           className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(90deg, rgba(74,74,82,0.4) 0%, rgba(74,74,82,0.4) 100%)',
-          }}
+          style={{ background: 'var(--color-fg-dim)', opacity: 0.35 }}
         />
         <motion.div
           className="absolute top-0 left-0 h-full"
           style={{
             background:
-              'linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-alt) 100%)',
-            boxShadow: '0 0 8px rgba(158,255,110,0.5)',
+              'linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-alt) 80%, transparent 100%)',
+            boxShadow: '0 0 6px rgba(158,255,110,0.45)',
           }}
           initial={{ width: '0%' }}
-          animate={inView ? { width: '60%' } : {}}
-          transition={{ duration: 1.2, ease: ease.expoOut, delay: index * 0.08 + 0.4 }}
+          animate={inView ? { width: '55%' } : {}}
+          transition={{ duration: 1.4, ease: ease.expoOut, delay: index * 0.08 + 0.35 }}
         />
       </motion.div>
 
-      <h3 className="mt-4 font-[var(--font-sans)] text-base md:text-lg text-[color:var(--color-fg-primary)]">
+      <h3 className="mt-4 font-[var(--font-sans)] text-sm md:text-base font-medium text-[color:var(--color-fg-primary)] tracking-[-0.005em]">
         {stat.label}
       </h3>
-      <p className="mt-1 font-mono text-xs text-[color:var(--color-fg-meta)]">{stat.note}</p>
+      <p className="mt-1.5 font-mono text-[11px] leading-relaxed text-[color:var(--color-fg-meta)]">
+        {stat.note}
+      </p>
     </motion.div>
   );
 }

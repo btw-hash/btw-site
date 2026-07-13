@@ -29,10 +29,7 @@ export function BuiltWith() {
       className="px-6 md:px-12 lg:px-20 py-16 md:py-20 border-b border-[color:var(--color-fg-dim)]/30"
     >
       <div className="max-w-[1400px] mx-auto">
-        <h2
-          id="built-with-heading"
-          className="font-[var(--font-sans-alt)] text-xs uppercase tracking-[0.15em] text-[color:var(--color-fg-muted)] mb-8"
-        >
+        <h2 id="built-with-heading" className="section-label mb-10">
           {t.builtWith.heading}
         </h2>
 
@@ -44,12 +41,12 @@ export function BuiltWith() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="flex items-baseline justify-between gap-3 pb-2 border-b border-[color:var(--color-fg-dim)]/20"
+              className="flex items-baseline justify-between gap-3 pb-3 border-b border-[color:var(--color-fg-dim)]/15"
             >
-              <span className="font-[var(--font-sans)] text-base md:text-lg text-[color:var(--color-fg-primary)] truncate">
+              <span className="font-[var(--font-sans)] text-sm md:text-base tracking-[-0.01em] text-[color:var(--color-fg-primary)] truncate">
                 {it.name}
               </span>
-              <span className="font-mono text-[11px] text-[color:var(--color-fg-meta)] shrink-0">
+              <span className="font-mono text-[10px] tracking-[0.04em] text-[color:var(--color-fg-meta)]/70 shrink-0">
                 {it.count} {it.count === 1 ? t.builtWith.unit : t.builtWith.unitPlural}
               </span>
             </motion.li>

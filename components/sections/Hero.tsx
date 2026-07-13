@@ -45,20 +45,27 @@ export function Hero() {
             <HeroScene />
           </Suspense>
         )}
-        {/* Legibility veil under text column on desktop */}
+        {/* Legibility veil under text column on desktop — two-layer: hard bg fade + soft midtone */}
         <div
           className="absolute inset-0 hidden md:block"
           style={{
             background:
-              'linear-gradient(to right, var(--color-bg-base) 0%, rgba(0,0,0,0.55) 28%, transparent 55%)',
+              'linear-gradient(to right, var(--color-bg-base) 0%, var(--color-bg-base) 16%, rgba(7,7,10,0.82) 34%, rgba(7,7,10,0.3) 52%, transparent 68%)',
           }}
         />
-        {/* Mobile veil — softer, for text on top of fallback */}
+        {/* Bottom fade — blends hero into next section */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-48 hidden md:block"
+          style={{
+            background: 'linear-gradient(to top, var(--color-bg-base) 0%, transparent 100%)',
+          }}
+        />
+        {/* Mobile veil */}
         <div
           className="absolute inset-0 md:hidden"
           style={{
             background:
-              'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.55) 50%, var(--color-bg-base) 100%)',
+              'linear-gradient(to bottom, rgba(7,7,10,0.15) 0%, rgba(7,7,10,0.6) 55%, var(--color-bg-base) 100%)',
           }}
         />
       </div>
@@ -68,11 +75,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: dur.reveal, ease: ease.expoOut, delay: 0.1 }}
-          className="flex items-center gap-3 mb-6 md:mb-8 font-mono text-[11px] md:text-xs uppercase tracking-[0.15em] text-[color:var(--color-fg-muted)]"
+          className="section-label mb-7 md:mb-10"
         >
           <span
-            className="inline-block w-2 h-2 rounded-full bg-[color:var(--color-accent)]"
-            style={{ boxShadow: '0 0 12px rgba(158,255,110,0.6)' }}
+            className="inline-block w-1.5 h-1.5 rounded-full bg-[color:var(--color-accent)] shrink-0"
+            style={{ boxShadow: '0 0 10px rgba(158,255,110,0.7), 0 0 4px rgba(158,255,110,1)' }}
             aria-hidden
           />
           <span>{t.hero.eyebrow}</span>
@@ -84,7 +91,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: dur.slow, ease: ease.expoOut, delay: 0.9 }}
-          className="mt-6 md:mt-8 text-base md:text-xl text-[color:var(--color-fg-muted)] max-w-[40ch] leading-[1.5]"
+          className="mt-6 md:mt-8 text-base md:text-[1.125rem] text-[color:var(--color-fg-muted)] max-w-[38ch] leading-[1.65] tracking-[-0.005em]"
         >
           {t.hero.subheading}
         </motion.p>
@@ -93,17 +100,18 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: dur.slow, ease: ease.expoOut, delay: 1.1 }}
-          className="mt-8 md:mt-10 flex flex-wrap items-center gap-3 md:gap-4"
+          className="mt-9 md:mt-11 flex flex-wrap items-center gap-3 md:gap-4"
         >
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-5 md:px-6 py-3 font-[var(--font-sans-alt)] font-semibold bg-[color:var(--color-accent)] text-[color:var(--color-bg-base)] hover:brightness-110 transition-all text-sm md:text-base"
+            className="inline-flex items-center justify-center px-6 md:px-7 py-3 font-[var(--font-sans-alt)] text-[13px] font-semibold tracking-[0.03em] uppercase bg-[color:var(--color-accent)] text-[color:var(--color-bg-base)] hover:brightness-110 active:brightness-95 transition-all duration-200"
+            style={{ letterSpacing: '0.04em' }}
           >
             {t.hero.ctaPrimary}
           </Link>
           <a
             href="#work"
-            className="inline-flex items-center justify-center px-5 md:px-6 py-3 font-[var(--font-sans-alt)] border border-[color:var(--color-fg-dim)] text-[color:var(--color-fg-primary)] hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)] transition-colors text-sm md:text-base"
+            className="inline-flex items-center justify-center px-6 md:px-7 py-3 font-[var(--font-sans-alt)] text-[13px] tracking-[0.04em] uppercase border border-[color:var(--color-fg-dim)] text-[color:var(--color-fg-muted)] hover:border-[color:var(--color-fg-primary)]/60 hover:text-[color:var(--color-fg-primary)] transition-all duration-200"
           >
             {t.hero.ctaSecondary}
           </a>
@@ -113,11 +121,10 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.4 }}
-          className="mt-10 md:mt-16 flex items-center gap-2 font-mono text-xs text-[color:var(--color-fg-meta)]"
+          className="mt-12 md:mt-20 flex items-center gap-3 font-mono text-[10px] tracking-[0.14em] uppercase text-[color:var(--color-fg-dim)]"
         >
-          <span aria-hidden>·</span>
+          <span aria-hidden className="inline-block w-5 h-[1px] bg-[color:var(--color-fg-dim)]" />
           <span>{t.hero.scroll}</span>
-          <span aria-hidden>↓</span>
         </motion.div>
       </div>
 

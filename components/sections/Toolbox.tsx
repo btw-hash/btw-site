@@ -169,14 +169,11 @@ export function Toolbox() {
       aria-labelledby="toolbox-heading"
       className="relative px-6 md:px-12 lg:px-20 py-24 md:py-32 overflow-hidden border-y border-[color:var(--color-fg-dim)]/30"
     >
-      <div className="flex items-baseline justify-between mb-12">
-        <h2
-          id="toolbox-heading"
-          className="font-[var(--font-sans-alt)] text-xs uppercase tracking-[0.15em] text-[color:var(--color-fg-muted)]"
-        >
+      <div className="flex items-center justify-between mb-14">
+        <h2 id="toolbox-heading" className="section-label">
           {t.toolbox.heading}
         </h2>
-        <span className="font-mono text-xs text-[color:var(--color-fg-meta)] hidden md:block">
+        <span className="font-mono text-[10px] tracking-[0.1em] text-[color:var(--color-fg-dim)] hidden md:block">
           {totalCount} {t.toolbox.counter}
         </span>
       </div>
@@ -193,17 +190,16 @@ export function Toolbox() {
               ease: [0.22, 1, 0.36, 1],
               delay: (i % 3) * 0.08,
             }}
-            className="group relative rounded-sm p-6 md:p-8 min-h-[280px] border border-[color:var(--color-fg-dim)]/40 hover:border-[color:var(--color-accent)]/50 transition-colors overflow-hidden"
+            className="group relative rounded-[2px] p-6 md:p-7 min-h-[260px] border border-[color:var(--color-fg-dim)]/25 hover:border-[color:var(--color-fg-dim)]/55 transition-all duration-300 overflow-hidden"
             style={{
-              background: `linear-gradient(135deg, ${tile.accent}12 0%, transparent 55%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005))`,
-              backdropFilter: 'blur(24px)',
+              background: `linear-gradient(145deg, ${tile.accent}0d 0%, transparent 50%), var(--color-bg-elev-1)`,
             }}
           >
             <div
               aria-hidden
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-600 pointer-events-none"
               style={{
-                background: `radial-gradient(500px circle at 50% 0%, ${tile.accent}1a, transparent 60%)`,
+                background: `radial-gradient(400px circle at 50% -20%, ${tile.accent}18, transparent 65%)`,
               }}
             />
 
@@ -225,15 +221,15 @@ export function Toolbox() {
               </span>
             </div>
 
-            <ul className="relative flex flex-wrap gap-x-3 gap-y-2">
+            <ul className="relative flex flex-wrap gap-x-3 gap-y-1.5">
               {tile.items.map((tx, idx) => (
                 <motion.li
                   key={tx}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.1 + idx * 0.012, duration: 0.4 }}
-                  className="font-[var(--font-sans)] text-sm md:text-[15px] text-[color:var(--color-fg-muted)] group-hover:text-[color:var(--color-fg-primary)] transition-colors"
+                  transition={{ delay: 0.08 + idx * 0.01, duration: 0.35 }}
+                  className="font-[var(--font-sans)] text-[13px] md:text-sm tracking-[-0.005em] text-[color:var(--color-fg-muted)] group-hover:text-[color:var(--color-fg-primary)] transition-colors duration-200"
                 >
                   {tx}
                 </motion.li>
@@ -244,17 +240,17 @@ export function Toolbox() {
       </div>
 
       <div
-        className="relative overflow-hidden mt-16 py-6 border-t border-[color:var(--color-fg-dim)]/20"
+        className="relative overflow-hidden mt-16 py-5 border-t border-[color:var(--color-fg-dim)]/15"
         style={{
-          maskImage: 'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)',
-          WebkitMaskImage: 'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)',
+          maskImage: 'linear-gradient(90deg, transparent, black 8%, black 92%, transparent)',
+          WebkitMaskImage: 'linear-gradient(90deg, transparent, black 8%, black 92%, transparent)',
         }}
       >
         <motion.div
-          className="flex gap-10 whitespace-nowrap will-change-transform"
+          className="flex gap-12 whitespace-nowrap will-change-transform"
           animate={{ x: ['0%', '-50%'] }}
           transition={{
-            duration: 140,
+            duration: 160,
             repeat: Infinity,
             ease: 'linear',
           }}
@@ -262,11 +258,11 @@ export function Toolbox() {
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={`${item}-${i}`}
-              className="flex items-center gap-10 font-[var(--font-display)] text-3xl md:text-5xl tracking-[-0.02em] text-[color:var(--color-fg-dim)] hover:text-[color:var(--color-accent)] transition-colors"
+              className="flex items-center gap-12 font-[var(--font-display)] text-2xl md:text-[2.5rem] tracking-[-0.025em] text-[color:var(--color-fg-dim)]/60 hover:text-[color:var(--color-fg-primary)] transition-colors duration-300"
             >
               {item}
-              <span aria-hidden className="text-[color:var(--color-accent)] text-sm">
-                ●
+              <span aria-hidden className="text-[color:var(--color-accent)]/40 text-[8px]">
+                ◆
               </span>
             </span>
           ))}

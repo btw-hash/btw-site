@@ -26,10 +26,7 @@ export function Process() {
       aria-labelledby="process-heading"
       className="relative px-6 md:px-12 lg:px-20 py-24 md:py-32"
     >
-      <h2
-        id="process-heading"
-        className="font-[var(--font-sans-alt)] text-xs uppercase tracking-[0.15em] text-[color:var(--color-fg-muted)]"
-      >
+      <h2 id="process-heading" className="section-label">
         {t.process.heading}
       </h2>
 
@@ -107,14 +104,16 @@ function ProcessStep({
       <motion.span
         aria-hidden
         style={{ y: numberY, opacity: numberOpacity }}
-        className="block font-[var(--font-display)] text-[120px] md:text-[160px] leading-none tracking-[-0.04em] text-[color:var(--color-fg-dim)] pb-2"
+        className="block font-[var(--font-display)] text-[100px] md:text-[130px] leading-none tracking-[-0.045em] text-[color:var(--color-fg-dim)]/35 pb-1 select-none"
       >
         {step.n}
       </motion.span>
-      <h3 className="mt-2 font-[var(--font-sans)] text-2xl text-[color:var(--color-fg-primary)]">
+      <h3 className="mt-3 font-[var(--font-sans)] text-xl md:text-2xl tracking-[-0.015em] text-[color:var(--color-fg-primary)] font-medium">
         {step.title}
       </h3>
-      <p className="mt-3 text-[color:var(--color-fg-muted)] max-w-[28ch]">{step.body}</p>
+      <p className="mt-3 text-[14px] leading-[1.7] text-[color:var(--color-fg-muted)] max-w-[26ch]">
+        {step.body}
+      </p>
     </motion.div>
   );
 }

@@ -42,14 +42,11 @@ export function Services() {
       aria-labelledby="services-heading"
       className="relative px-6 md:px-12 lg:px-20 py-24 md:py-32"
     >
-      <h2
-        id="services-heading"
-        className="font-[var(--font-sans-alt)] text-xs uppercase tracking-[0.15em] text-[color:var(--color-fg-muted)]"
-      >
+      <h2 id="services-heading" className="section-label">
         {t.services.heading}
       </h2>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
         {t.services.items.map((s, i) => (
           <ServiceCard
             key={s.title}
@@ -63,7 +60,7 @@ export function Services() {
         ))}
       </div>
 
-      <p className="mt-8 font-mono text-xs text-[color:var(--color-fg-dim)]">
+      <p className="mt-8 font-mono text-[11px] text-[color:var(--color-fg-dim)] tracking-[0.02em]">
         {t.services.fineprint}
       </p>
     </section>
@@ -131,66 +128,76 @@ function ServiceCard({
         transformPerspective: 1200,
         rotateX: rotX,
         rotateY: rotY,
+        background: 'var(--color-bg-elev-1)',
       }}
-      className="group relative overflow-hidden rounded-sm p-6 min-h-[320px] flex flex-col justify-between border border-[color:var(--color-fg-dim)]/40 hover:border-[color:var(--color-accent)]/70 transition-colors"
+      className="group relative overflow-hidden rounded-[2px] p-6 min-h-[340px] flex flex-col justify-between border border-[color:var(--color-fg-dim)]/30 hover:border-[color:var(--color-fg-dim)]/70 transition-all duration-300"
     >
+      {/* Subtle inner-top highlight */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10"
+        className="absolute inset-x-0 top-0 h-px"
         style={{
-          background: 'linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))',
-          backdropFilter: 'blur(24px)',
+          background: `linear-gradient(90deg, transparent, ${accent}40 50%, transparent)`,
         }}
       />
+      {/* Mouse-follow gradient */}
       <motion.div
         aria-hidden
-        className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
           background: useTransform(
             [gx, gy] as any,
             ([vx, vy]: number[]) =>
-              `radial-gradient(400px circle at ${vx}% ${vy}%, ${accent}22, transparent 50%)`
+              `radial-gradient(380px circle at ${vx}% ${vy}%, ${accent}1a, transparent 55%)`
           ),
         }}
       />
 
       <div>
         <div className="flex items-start justify-between">
-          <div className="transition-transform duration-500 group-hover:-translate-y-1 group-hover:scale-105">
+          <div className="transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:scale-105">
             <ServiceIcon index={index} color={accent} />
           </div>
           <span
             aria-hidden
-            className="w-2 h-2 rounded-full mt-3 transition-all duration-300 group-hover:scale-150"
-            style={{ background: accent, boxShadow: `0 0 12px ${accent}` }}
+            className="w-1.5 h-1.5 rounded-full mt-4 transition-all duration-400 group-hover:scale-[2]"
+            style={{
+              background: accent,
+              boxShadow: `0 0 0 0 ${accent}`,
+              transition: 'box-shadow 0.3s ease, transform 0.3s ease',
+            }}
           />
         </div>
-        <h3 className="mt-6 font-[var(--font-display)] text-[1.9rem] leading-[1.1] pb-1 tracking-[-0.02em]">
+        <h3 className="mt-7 font-[var(--font-display)] text-[2rem] leading-[1.08] pb-1 tracking-[-0.025em]">
           {title}
         </h3>
-        <p className="mt-3 text-[color:var(--color-fg-muted)] text-[15px] leading-[1.5]">{body}</p>
+        <p className="mt-3 text-[color:var(--color-fg-muted)] text-[14px] leading-[1.65] tracking-[0.005em]">
+          {body}
+        </p>
       </div>
 
-      <div className="mt-6 pt-4 border-t border-[color:var(--color-fg-dim)]/30">
-        <div className="grid grid-cols-2 gap-2 mb-4">
+      <div className="mt-6 pt-4 border-t border-[color:var(--color-fg-dim)]/20">
+        <div className="grid grid-cols-2 gap-3 mb-4">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-fg-dim)]">
+            <div className="font-mono text-[10px] uppercase tracking-[0.13em] text-[color:var(--color-fg-dim)]">
               {timelineLabel}
               <span className="text-[color:var(--color-accent)] ml-0.5">*</span>
             </div>
-            <div className="mt-1 text-sm text-[color:var(--color-fg-primary)]">{timeline}</div>
+            <div className="mt-1.5 text-[13px] text-[color:var(--color-fg-primary)] tracking-[-0.01em]">
+              {timeline}
+            </div>
           </div>
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-fg-dim)]">
+            <div className="font-mono text-[10px] uppercase tracking-[0.13em] text-[color:var(--color-fg-dim)]">
               {startingLabel}
               <span className="text-[color:var(--color-accent)] ml-0.5">*</span>
             </div>
-            <div className="mt-1 text-sm" style={{ color: accent }}>
+            <div className="mt-1.5 text-[13px] tracking-[-0.01em]" style={{ color: accent }}>
               {from}
             </div>
           </div>
         </div>
-        <ul className="flex flex-wrap gap-2 font-mono text-[11px] text-[color:var(--color-fg-meta)]">
+        <ul className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] tracking-[0.04em] text-[color:var(--color-fg-dim)]">
           {stack.map((tg) => (
             <li key={tg}>{tg}</li>
           ))}

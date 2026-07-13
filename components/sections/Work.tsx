@@ -82,14 +82,17 @@ export function Work() {
       aria-labelledby="work-heading"
       className="px-6 md:px-12 lg:px-20 py-24 md:py-32"
     >
-      <div className="flex items-baseline justify-between mb-12">
+      <div className="flex items-end justify-between mb-12 md:mb-14">
         <h2
           id="work-heading"
-          className="font-[var(--font-display)] text-4xl md:text-6xl tracking-[-0.02em] pb-2"
+          className="font-[var(--font-display)] text-[2.5rem] md:text-[4.5rem] tracking-[-0.03em] leading-[1.0] pb-1"
         >
-          {t.work.heading} <span className="text-[color:var(--color-fg-dim)]">/ 2024–2026</span>
+          {t.work.heading}{' '}
+          <span className="text-[color:var(--color-fg-dim)]/70 font-[var(--font-display)]">
+            / 2024–2026
+          </span>
         </h2>
-        <span className="hidden md:block font-mono text-xs text-[color:var(--color-fg-meta)]">
+        <span className="hidden md:block font-mono text-[10px] tracking-[0.1em] text-[color:var(--color-fg-meta)] pb-1.5">
           {projects.length} {t.work.counterOne}
         </span>
       </div>
@@ -99,7 +102,7 @@ export function Work() {
           onMouseLeave={() => setActiveIdx(null)}
           className="divide-y divide-[color:var(--color-fg-dim)]/30"
         >
-          <li className="hidden md:grid grid-cols-[60px_1.5fr_2fr_auto] gap-6 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-[color:var(--color-fg-dim)]">
+          <li className="hidden md:grid grid-cols-[60px_1.5fr_2fr_auto] gap-6 py-3 font-mono text-[10px] uppercase tracking-[0.14em] text-[color:var(--color-fg-dim)]/60">
             <span>{t.work.colYear}</span>
             <span>{t.work.colProject}</span>
             <span>{t.work.colStack}</span>
@@ -133,7 +136,7 @@ export function Work() {
                   }}
                   onMouseEnter={() => setActiveIdx(i)}
                   onFocus={() => setActiveIdx(i)}
-                  className={`group grid grid-cols-[60px_1.5fr_2fr_auto] gap-6 py-6 md:py-8 items-baseline border-l-2 border-transparent transition-all duration-300 hover:pl-4 ${
+                  className={`group grid grid-cols-[60px_1.5fr_2fr_auto] gap-6 py-6 md:py-7 items-baseline border-l-2 border-transparent transition-all duration-250 hover:pl-4 ${
                     p.href ? 'cursor-pointer' : 'cursor-default'
                   }`}
                   style={{
@@ -146,7 +149,7 @@ export function Work() {
 
                   <div>
                     <h3
-                      className="font-[var(--font-display)] text-2xl md:text-4xl tracking-[-0.02em] leading-[1.1] pb-1 transition-colors"
+                      className="font-[var(--font-display)] text-[1.625rem] md:text-[2.75rem] tracking-[-0.025em] leading-[1.05] pb-1 transition-colors"
                       style={{
                         color: activeIdx === i ? p.accent : 'var(--color-fg-primary)',
                       }}
@@ -187,8 +190,8 @@ export function Work() {
           })}
         </ul>
 
-        <div className="hidden lg:block w-[360px] sticky top-28 self-start">
-          <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-[color:var(--color-fg-dim)]/40">
+        <div className="hidden lg:block w-[320px] sticky top-28 self-start">
+          <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden border border-[color:var(--color-fg-dim)]/25">
             <AnimatePresence mode="wait">
               {active ? (
                 <motion.div
@@ -238,9 +241,10 @@ export function Work() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute inset-0 flex items-center justify-center bg-[color:var(--color-bg-elev-1)]"
+                  className="absolute inset-0 flex items-center justify-center"
+                  style={{ background: 'var(--color-bg-elev-1)' }}
                 >
-                  <span className="font-mono text-xs text-[color:var(--color-fg-dim)] uppercase tracking-[0.12em]">
+                  <span className="font-mono text-[10px] text-[color:var(--color-fg-dim)]/50 uppercase tracking-[0.16em]">
                     {t.work.hoverHint}
                   </span>
                 </motion.div>

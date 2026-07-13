@@ -12,9 +12,10 @@ export function ContactCTA() {
     <section
       id="contact-cta"
       aria-labelledby="contact-heading"
-      className="relative overflow-hidden px-6 md:px-12 lg:px-20 py-32 md:py-40"
+      className="relative overflow-hidden px-6 md:px-12 lg:px-20 py-32 md:py-44"
       style={{
-        background: 'linear-gradient(180deg, var(--color-bg-base) 0%, var(--color-bg-elev-1) 100%)',
+        background:
+          'radial-gradient(ellipse at 50% 0%, rgba(158,255,110,0.06) 0%, transparent 55%), radial-gradient(ellipse at 20% 100%, rgba(184,166,255,0.05) 0%, transparent 50%), var(--color-bg-base)',
       }}
     >
       <div
@@ -33,16 +34,16 @@ export function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 1, ease: ease.expoOut }}
-          className="font-[var(--font-display)] text-5xl md:text-7xl lg:text-8xl tracking-[-0.03em] leading-[1.0]"
+          className="font-[var(--font-display)] text-[3rem] md:text-[5.5rem] lg:text-[7rem] tracking-[-0.035em] leading-[0.97]"
         >
           {t.contactCTA.heading[0]} <br />
           {t.contactCTA.heading[1]}
         </motion.h2>
 
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4">
+        <div className="mt-14 flex flex-col md:flex-row items-center justify-center gap-3">
           <a
             href="mailto:hello@btw.studio"
-            className="inline-flex items-center justify-center px-6 py-3 font-[var(--font-sans-alt)] font-semibold bg-[color:var(--color-accent)] text-[color:var(--color-bg-base)] hover:brightness-110 transition-all"
+            className="inline-flex items-center justify-center px-8 py-3.5 font-[var(--font-sans-alt)] text-[13px] font-semibold tracking-[0.05em] uppercase bg-[color:var(--color-accent)] text-[color:var(--color-bg-base)] hover:brightness-110 active:brightness-95 transition-all duration-200"
           >
             hello@btw.studio
           </a>
@@ -50,9 +51,9 @@ export function ContactCTA() {
             href="https://t.me/btw_aitech"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 font-[var(--font-sans-alt)] border border-[color:var(--color-accent)] text-[color:var(--color-accent)] hover:bg-[color:var(--color-accent)]/10 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-3.5 font-[var(--font-sans-alt)] text-[13px] tracking-[0.05em] uppercase border border-[color:var(--color-fg-dim)] text-[color:var(--color-fg-muted)] hover:border-[color:var(--color-fg-primary)]/50 hover:text-[color:var(--color-fg-primary)] transition-all duration-200"
           >
-            Telegram → @btw_aitech
+            @btw_aitech →
           </a>
         </div>
 

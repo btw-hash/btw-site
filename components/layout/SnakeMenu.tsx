@@ -48,10 +48,10 @@ export function SnakeMenu() {
         role="banner"
         className="fixed top-0 left-0 right-0 z-[100] px-6 md:px-12 lg:px-20 py-4 md:py-6 isolate"
         style={{
-          background: 'color-mix(in srgb, var(--color-bg-base) 75%, transparent)',
-          backdropFilter: 'blur(16px) saturate(140%)',
-          WebkitBackdropFilter: 'blur(16px) saturate(140%)',
-          borderBottom: '1px solid color-mix(in srgb, var(--color-fg-dim) 30%, transparent)',
+          background: 'color-mix(in srgb, var(--color-bg-base) 82%, transparent)',
+          backdropFilter: 'blur(20px) saturate(160%)',
+          WebkitBackdropFilter: 'blur(20px) saturate(160%)',
+          borderBottom: '1px solid color-mix(in srgb, var(--color-fg-dim) 22%, transparent)',
         }}
       >
         <nav aria-label="Main navigation" className="flex items-center justify-between">
@@ -67,12 +67,12 @@ export function SnakeMenu() {
           </motion.span>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8 font-[var(--font-sans-alt)] text-xs uppercase tracking-[0.12em] text-[color:var(--color-fg-muted)]">
+          <ul className="hidden md:flex items-center gap-7 font-[var(--font-sans-alt)] text-[11px] uppercase tracking-[0.13em] text-[color:var(--color-fg-meta)]">
             {links.map((l) => (
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="transition-colors hover:text-[color:var(--color-fg-primary)]"
+                  className="transition-colors duration-150 hover:text-[color:var(--color-fg-primary)]"
                 >
                   {l.label}
                 </Link>
