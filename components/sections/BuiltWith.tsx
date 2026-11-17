@@ -44,9 +44,9 @@ export function BuiltWith() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="flex items-baseline justify-between gap-3 pb-2 border-b border-[color:var(--color-fg-dim)]/20"
+              className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-3 pb-2 border-b border-[color:var(--color-fg-dim)]/20"
             >
-              <span className="font-[var(--font-sans)] text-base md:text-lg text-[color:var(--color-fg-primary)] truncate">
+              <span className="font-[var(--font-sans)] text-base md:text-lg text-[color:var(--color-fg-primary)] md:truncate">
                 {it.name}
               </span>
               <span className="font-mono text-[11px] text-[color:var(--color-fg-meta)] shrink-0">

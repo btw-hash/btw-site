@@ -42,7 +42,7 @@ export function HeroFallback() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-        className="relative z-10 w-[260px] h-[320px] sm:w-[280px] sm:h-[360px] rounded-[6px] flex flex-col items-center justify-center"
+        className="relative z-10 w-[200px] h-[220px] sm:w-[280px] sm:h-[360px] rounded-[6px] flex flex-col items-center justify-center"
         style={{
           background: 'linear-gradient(135deg, rgba(232,232,240,0.08), rgba(232,232,240,0.02))',
           backdropFilter: 'blur(24px)',
@@ -56,7 +56,7 @@ export function HeroFallback() {
             filter: 'drop-shadow(0 0 16px rgba(158,255,110,0.35))',
           }}
         >
-          <BtwMark className="w-[180px] sm:w-[200px] h-auto" title="BTW" />
+          <BtwMark className="w-[140px] sm:w-[200px] h-auto" title="BTW" />
         </span>
       </motion.div>
     </div>
