@@ -133,7 +133,7 @@ export function Work() {
                   }}
                   onMouseEnter={() => setActiveIdx(i)}
                   onFocus={() => setActiveIdx(i)}
-                  className={`group grid grid-cols-[60px_1.5fr_2fr_auto] gap-6 py-6 md:py-8 items-baseline border-l-2 border-transparent transition-all duration-300 hover:pl-4 ${
+                  className={`group grid grid-cols-[44px_1fr_auto] md:grid-cols-[60px_1.5fr_2fr_auto] gap-4 md:gap-6 py-6 md:py-8 items-baseline border-l-2 border-transparent transition-all duration-300 hover:pl-4 ${
                     p.href ? 'cursor-pointer' : 'cursor-default'
                   }`}
                   style={{

@@ -38,9 +38,7 @@ export function Hero() {
     >
       {/* Full-bleed background scene — never clipped by grid columns */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden>
-        {isMobile ? (
-          <HeroFallback />
-        ) : (
+        {!isMobile && (
           <Suspense fallback={<HeroFallback />}>
             <HeroScene />
           </Suspense>
@@ -121,11 +119,13 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Reserve right column space on desktop so text stays in left half */}
+      {/* Mobile: brand card sits above the text; desktop: reserves the right column for the scene */}
       <div
-        className="hidden md:block h-[85vh] w-full order-1 md:order-2 pointer-events-none"
+        className="relative -mx-6 md:mx-0 h-[300px] sm:h-[400px] md:h-[85vh] md:w-full order-1 md:order-2 pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] md:[mask-image:none]"
         aria-hidden
-      />
+      >
+        {isMobile && <HeroFallback />}
+      </div>
     </section>
   );
 }
